@@ -7,6 +7,7 @@ __pycache__/
 htmlcov/
 node_modules/
 dist/
+.vercel/
 
 # Runtime databases and SQLite sidecars
 data/*.db

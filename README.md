@@ -95,6 +95,12 @@ npm test
 npm run build
 ```
 
+### Vista previa en Vercel
+
+Al importar la raíz del repositorio en Vercel se publica automáticamente una demo estática con datos ficticios. No requiere variables, base de datos ni cambiar el directorio raíz.
+
+Esta demo sirve para enseñar la interfaz y validar el despliegue. No almacena tickets reales ni sustituye la instalación local. Para una copia web con datos sincronizados usa el Worker/D1 descrito arriba o conecta otro almacenamiento persistente.
+
 ## Privacidad y copias de seguridad
 
 - `data/`, `receipts/`, logs, secretos y credenciales están excluidos de Git.

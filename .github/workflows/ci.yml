@@ -45,3 +45,13 @@ jobs:
         with:
           node-version: 22
       - run: npm test
+
+  vercel-demo:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - run: node deploy/vercel/build.mjs
+      - run: test -s dist/index.html && test -s dist/snapshot.json && test -s dist/app-icon.svg
