@@ -1,0 +1,26 @@
+{
+  "supermarket": "Mercadona",
+  "purchase_date": "2026-08-19",
+  "purchase_date_source": "ocr",
+  "article_count": 6,
+  "printed_product_line_count": 4,
+  "subtotal_gross": "14.11",
+  "amount_paid": "14.11",
+  "critical_items": {
+    "BEBIDA ALMENDRAS 0%": {
+      "purchase_quantity": "3",
+      "unit_price": "1.10",
+      "line_gross": "3.30"
+    },
+    "AGUADOY GAS P-6X500M": {
+      "purchase_quantity": "1",
+      "purchase_unit": "pack",
+      "pack_count": 6,
+      "content_per_unit_value": "500",
+      "content_per_unit_unit": "ml",
+      "normalized_quantity": "3",
+      "normalized_unit": "L",
+      "line_gross": "1.56"
+    }
+  }
+}

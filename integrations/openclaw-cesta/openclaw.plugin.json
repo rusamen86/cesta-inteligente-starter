@@ -1,0 +1,79 @@
+{
+  "id": "cesta-local",
+  "name": "Cesta Local",
+  "description": "Narrow trusted Gateway bridge for Cesta Inteligente",
+  "version": "0.1.0",
+  "activation": {
+    "onStartup": true
+  },
+  "configSchema": {
+    "type": "object",
+    "required": [
+      "socketPath",
+      "inboundMediaRoot",
+      "agentId",
+      "groupJid",
+      "allowedRequesterIds"
+    ],
+    "properties": {
+      "socketPath": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^/"
+      },
+      "inboundMediaRoot": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^/"
+      },
+      "agentId": {
+        "type": "string",
+        "const": "cesta"
+      },
+      "groupJid": {
+        "type": "string",
+        "pattern": "@g\\.us$"
+      },
+      "allowedRequesterIds": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        },
+        "minItems": 2,
+        "uniqueItems": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "contracts": {
+    "tools": [
+      "cesta_ingest",
+      "cesta_query",
+      "cesta_review",
+      "cesta_correct",
+      "cesta_receipt",
+      "cesta_dashboard_status"
+    ]
+  },
+  "toolMetadata": {
+    "cesta_ingest": {
+      "optional": true
+    },
+    "cesta_query": {
+      "optional": true
+    },
+    "cesta_review": {
+      "optional": true
+    },
+    "cesta_correct": {
+      "optional": true
+    },
+    "cesta_receipt": {
+      "optional": true
+    },
+    "cesta_dashboard_status": {
+      "optional": true
+    }
+  }
+}

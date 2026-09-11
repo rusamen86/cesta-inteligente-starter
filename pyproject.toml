@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cesta-inteligente"
+version = "0.2.0"
+description = "Procesador local y auditable de tickets domésticos"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "pydantic>=2.9,<3",
+  "streamlit>=1.40,<2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3,<9"]
+
+[project.scripts]
+cesta = "cesta_inteligente.cli:main"
+cesta-bridge = "cesta_inteligente.bridge_server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cesta_inteligente"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]

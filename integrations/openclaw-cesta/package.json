@@ -1,0 +1,36 @@
+{
+  "name": "cesta-inteligente-openclaw",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "files": [
+    "dist",
+    "openclaw.plugin.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/test/*.test.js"
+  },
+  "dependencies": {
+    "typebox": "^1.1.39"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "openclaw": "^2026.9.4",
+    "typescript": "^5.9.0"
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026.7.1-2"
+  },
+  "peerDependenciesMeta": {
+    "openclaw": {
+      "optional": true
+    }
+  },
+  "openclaw": {
+    "extensions": [
+      "./dist/src/index.js"
+    ]
+  }
+}

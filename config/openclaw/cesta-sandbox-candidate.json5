@@ -1,0 +1,59 @@
+{
+  agents: {
+    defaults: {
+      workspace: "/Users/usuario/.openclaw/workspace",
+    },
+    list: [
+      {
+        id: "main",
+        default: true,
+        workspace: "/Users/usuario/.openclaw/workspace",
+        sandbox: { mode: "off" },
+      },
+      {
+        id: "cesta",
+        name: "Cesta",
+        workspace: "/Users/usuario/.openclaw/workspace-cesta",
+        agentDir: "/Users/usuario/.openclaw/agents/cesta/agent",
+        sandbox: {
+          mode: "all",
+          scope: "session",
+          backend: "docker",
+          workspaceAccess: "none",
+          docker: {
+            network: "none",
+            readOnlyRoot: true,
+            capDrop: ["ALL"],
+          },
+        },
+        tools: {
+          allow: [
+            "cesta_ingest",
+            "cesta_query",
+            "cesta_review",
+            "cesta_correct",
+            "cesta_receipt",
+            "cesta_dashboard_status",
+          ],
+          // OpenClaw auto-incluye `image` en sesiones con adjuntos. Cesta no la
+          // necesita: el plugin entrega únicamente IDs opacos al bridge local.
+          deny: ["image"],
+          sandbox: {
+            tools: {
+              allow: [
+                "cesta_ingest",
+                "cesta_query",
+                "cesta_review",
+                "cesta_correct",
+                "cesta_receipt",
+                "cesta_dashboard_status",
+              ],
+              deny: ["image"],
+            },
+          },
+          elevated: { enabled: false },
+        },
+      },
+    ],
+  },
+}

@@ -1,0 +1,85 @@
+{
+  "supermarket": "Carrefour",
+  "store_name": "Ciudad Centro",
+  "purchase_date_source": "inferred",
+  "expected_status_before_confirmation": "needs_review",
+  "article_count": 48,
+  "printed_product_line_count": 45,
+  "normalized_item_count": 44,
+  "gross_items_sum": "151.96",
+  "immediate_discounts": "1.87",
+  "subtotal_gross": "150.09",
+  "coupon_applied": "3.00",
+  "amount_paid": "147.09",
+  "critical_items": {
+    "TORTILLA AVENA": {
+      "purchase_quantity": "2",
+      "unit_price": "1.81",
+      "line_gross": "3.62"
+    },
+    "GNOCCHI DE PATATA AL58": {
+      "purchase_quantity": "2",
+      "unit_price": "0.89",
+      "line_gross": "1.78",
+      "line_discount": "0.45",
+      "line_final": "1.33"
+    },
+    "MOCHI CARREFOUR 6U D422": {
+      "purchase_quantity": "2",
+      "purchase_unit": "pack",
+      "pack_count": 6,
+      "normalized_quantity": "12",
+      "normalized_unit": "unit",
+      "unit_price": "2.85",
+      "line_gross": "5.70",
+      "line_discount": "1.42",
+      "line_final": "4.28"
+    },
+    "QUESO CRF 4X62,5G": {
+      "purchase_quantity": "1",
+      "pack_count": 4,
+      "content_per_unit_value": "62.5",
+      "content_per_unit_unit": "g",
+      "normalized_quantity": "0.25",
+      "normalized_unit": "kg"
+    },
+    "P.P L.FR/SAL 2X200G": {
+      "purchase_quantity": "1",
+      "pack_count": 2,
+      "normalized_quantity": "0.4",
+      "normalized_unit": "kg"
+    },
+    "QUESO FETA BIO 180G": {
+      "purchase_quantity": "1",
+      "normalized_quantity": "0.18",
+      "normalized_unit": "kg"
+    },
+    "HOGAZA CEREALES 400G": {
+      "purchase_quantity": "1",
+      "normalized_quantity": "0.4",
+      "normalized_unit": "kg"
+    },
+    "POSTRE VEGETAL 400G": {
+      "purchase_quantity": "1",
+      "normalized_quantity": "0.4",
+      "normalized_unit": "kg"
+    },
+    "405 BAS 30L COCINA": {
+      "purchase_quantity": "1",
+      "normalized_quantity": "1",
+      "normalized_unit": "unit",
+      "capacity_is_not_consumable_content": true
+    },
+    "HUEVO M CRF 24 UNID": {
+      "purchase_quantity": "1",
+      "pack_count": 24,
+      "normalized_quantity": "24",
+      "normalized_unit": "egg"
+    },
+    "PAN ABUELA INTEGRAL": {
+      "purchase_quantity": "2",
+      "unit_price": "1.49",
+      "line_gross": "2.98"
+    }
+  }
+}

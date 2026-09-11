@@ -1,0 +1,46 @@
+.DS_Store
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+node_modules/
+dist/
+
+# Runtime databases and SQLite sidecars
+data/*.db
+data/*.db-*
+data/*.sqlite
+data/*.sqlite-*
+data/*.sock
+data/.hosted-sync.sha256
+data/objects/**
+artifacts/bin/**
+
+# Real receipt originals and production-derived private material
+receipts/**
+!receipts/.gitkeep
+tests/fixtures/private/**
+
+# Generated outputs and logs (may contain household data)
+artifacts/generated/**
+logs/**
+*.log
+
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+secrets/**
+secrets.*
+.secret*
+credentials/**
+*credentials*.json
+service-account*.json
+*.token
+*.pem
+*.key
+*.p12
+*.pfx
