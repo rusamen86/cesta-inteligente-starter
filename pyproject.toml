@@ -26,3 +26,6 @@ packages = ["src/cesta_inteligente"]
 [tool.pytest.ini_options]
 addopts = "-q"
 testpaths = ["tests"]
+
+[tool.vercel]
+entrypoint = "app.py"
