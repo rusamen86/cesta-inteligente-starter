@@ -1,8 +1,16 @@
 from __future__ import annotations
 
 import json
+import importlib.util
+from pathlib import Path
 
-from app import app
+
+APP_PATH = Path(__file__).parents[1] / "app.py"
+SPEC = importlib.util.spec_from_file_location("cesta_vercel_app", APP_PATH)
+assert SPEC and SPEC.loader
+MODULE = importlib.util.module_from_spec(SPEC)
+SPEC.loader.exec_module(MODULE)
+app = MODULE.app
 
 
 def request(path: str) -> tuple[str, dict[str, str], bytes]:

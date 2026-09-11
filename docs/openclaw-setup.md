@@ -5,7 +5,7 @@ Esta guía describe la arquitectura; no sustituye la documentación de la versi�
 ## 1. Preparar el proyecto
 
 ```bash
-uv sync --extra dev
+uv sync --extra dashboard --extra dev
 swiftc -O tools/macos-vision-ocr.swift -o artifacts/bin/cesta-vision-ocr
 cd integrations/openclaw-cesta
 npm ci
@@ -77,4 +77,3 @@ Deniega shell, filesystem, administración, elevated y acceso a otros agentes.
 7. Dashboard y SQLite: cifras coherentes.
 
 Haz una copia de seguridad antes de cualquier cambio de configuración o migración.
-

@@ -10,10 +10,10 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
   "pydantic>=2.9,<3",
-  "streamlit>=1.40,<2",
 ]
 
 [project.optional-dependencies]
+dashboard = ["streamlit>=1.40,<2"]
 dev = ["pytest>=8.3,<9"]
 
 [project.scripts]
@@ -28,4 +28,4 @@ addopts = "-q"
 testpaths = ["tests"]
 
 [tool.vercel]
-entrypoint = "app.py"
+entrypoint = "app:app"

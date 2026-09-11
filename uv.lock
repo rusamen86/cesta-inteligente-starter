@@ -81,10 +81,12 @@ version = "0.2.0"
 source = { editable = "." }
 dependencies = [
     { name = "pydantic" },
-    { name = "streamlit" },
 ]
 
 [package.optional-dependencies]
+dashboard = [
+    { name = "streamlit" },
+]
 dev = [
     { name = "pytest" },
 ]
@@ -93,9 +95,9 @@ dev = [
 requires-dist = [
     { name = "pydantic", specifier = ">=2.9,<3" },
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=8.3,<9" },
-    { name = "streamlit", specifier = ">=1.40,<2" },
+    { name = "streamlit", marker = "extra == 'dashboard'", specifier = ">=1.40,<2" },
 ]
-provides-extras = ["dev"]
+provides-extras = ["dashboard", "dev"]
 
 [[package]]
 name = "charset-normalizer"

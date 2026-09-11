@@ -15,7 +15,7 @@ jobs:
       - uses: astral-sh/setup-uv@v6
         with:
           enable-cache: true
-      - run: uv sync --extra dev --locked
+      - run: uv sync --extra dashboard --extra dev --locked
       - run: uv run pytest --basetemp=/tmp/cesta-tests
 
   openclaw-plugin:

@@ -27,7 +27,7 @@ La edición de este repositorio es un *starter* sin datos domésticos. Incluye c
 ```bash
 git clone <URL_DEL_REPO>
 cd cesta-inteligente
-uv sync --extra dev
+uv sync --extra dashboard --extra dev
 uv run pytest
 uv run cesta demo
 uv run streamlit run dashboard/app.py
